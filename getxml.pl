@@ -37,11 +37,11 @@ my %g_dbconf;
 
 # gerrit database configuration
 %g_dbconf = (
-        "hostaddr" => "10.0.64.28",
+        "hostaddr" => "localhost",
         "port" => "5432",
-        "dbname" => "reviewdbtmp1",
+        "dbname" => "reviewdbtemp",
         "user" => "gerrit",
-        "password" => "bjcmo#sciuser");
+        "password" => "gerrit");
 
 # connect to the gerrit database
 $dbh = pgsqldb_connect($g_dbconf{'hostaddr'},$g_dbconf{'user'}, $g_dbconf{'password'}, $g_dbconf{'dbname'});
